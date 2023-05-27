@@ -1,0 +1,12 @@
+package com.example.demo.model;
+
+import java.time.Instant;
+
+public class Pedido {
+	
+	private Long id;
+	private Instant momento;
+	
+	private Usuario cliente;
+
+}
