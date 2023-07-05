@@ -3,6 +3,7 @@ package com.example.demo.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.apache.catalina.startup.ClassLoaderFactory.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +23,11 @@ public class UsuarioService {
 	public Usuario findById(Long id) {
 		Optional<Usuario> obj = usuarioRepository.findById(id);
 		return obj.get();
+		
+	}
+	
+	public Usuario inserir(Usuario obj) {
+	 return usuarioRepository.save(obj);
 		
 	}
 

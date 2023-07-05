@@ -44,7 +44,6 @@ public class ItensdoPedido implements Serializable{
 		id.setPedido(pedido);
 	}
 	
-	@JsonIgnore
 	public Material getMaterial() {
 		return id.getMaterial();
 	}
