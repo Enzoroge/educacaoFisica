@@ -23,5 +23,9 @@ public class MaterialService {
 		Optional<Material> obj	= materialRepository.findById(id);
 		return obj.get();
 	}
+	
+	public Material inserir(Material obj) {
+		return materialRepository.save(obj);
+	}
 
 }

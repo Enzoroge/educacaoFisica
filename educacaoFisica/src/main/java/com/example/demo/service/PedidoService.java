@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.model.Material;
 import com.example.demo.model.Pedido;
 import com.example.demo.repositories.PedidoRepository;
 
@@ -22,6 +23,10 @@ public class PedidoService {
 	public Pedido findById(Long id) {
 		Optional<Pedido> obj = pedidoRepository.findById(id);
 		return obj.get();
+	}
+	
+	public Pedido inserir(Pedido obj) {
+		return pedidoRepository.save(obj);
 	}
 
 }
